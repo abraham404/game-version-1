@@ -1,0 +1,8 @@
+#win, #losses, #ties{
+
+    display: inline;
+}
+
+.labels{
+    margin-top: 25px;
+}
