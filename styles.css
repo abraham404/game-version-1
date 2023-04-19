@@ -1,8 +1,86 @@
-#win, #losses, #ties{
+body{
+    display: flex;
+    align-items: center;
+    font-family: Arial;
+    color: white;
+    flex-direction: column;
+}
 
-    display: inline;
+
+.container-status{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+
 }
 
 .labels{
-    margin-top: 25px;
+    margin-top: 25px;  
+}
+
+#status{
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#reset{
+    margin: 10px;
+    background-color: rgb(76, 76, 238);
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+#human, #computer{
+    display: inline;
+}
+
+.move-icon{
+    width: 50px;
+    height: 50px;
+}
+
+#btn-rock, #btn-paper, #btn-scissors {
+    width: 150px;
+    height: 150px;
+    background-size: 120px, 120px;
+    margin: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100%;
+    background-color: rgb(60, 60, 60);
+    border-color: white;
+    border-width: 1px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(60, 60, 60);;
+    border-radius: 20px;
+    
+}
+
+
+#win, #ties, #losses{
+    margin: 5px;
+}
+
+#btn-rock{
+    background-image: url(./images/rock-emoji.png);
+}
+
+#btn-paper{
+    background-image: url(./images/paper-emoji.png);
+}
+#btn-scissors{
+    background-image: url(./images/scissors-emoji.png);
+}
+
+button:hover{
+    cursor: pointer;
 }

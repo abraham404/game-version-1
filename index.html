@@ -9,19 +9,33 @@
 </head>
 <body>
     
-    <p>Rock Paper Scissors</p>
-    <div class="btns">
-        <button id="rock" onclick="btn1()">Rock</button>
-        <button id="paper" onclick="btn2()">Paper</button>
-        <button id="scissors" onclick="btn3()">Scissors</button>
-    </div>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <div class="btns">
+
+
+            <button id="btn-rock" onclick="console.log(humanPlayer('Rock'))"></button>
+            <button id="btn-paper" onclick="console.log(humanPlayer('Paper'))"></button>
+            <button id="btn-scissors" onclick="console.log(humanPlayer('Scissors'))"></button>
+
+        </div>
+        
+        <div class="labels">
+            
+            <div id="status"></div>
+            <div id="human"></div>
+            <div id="computer"></div>
+            <div id="computer-human"></div>
+            
+            <div class="container-status">
+                <div id="win">Wins: 0</div>
+                <div id="losses">Losses: 0</div>    
+                <div id="ties">Ties: 0</div>
+            </div>
+        </div>
     
-    <div class="labels">
-        <div id="win">Wins: 0</div>
-        <div id="losses">Losses: 0</div>
-        <div id="ties">Ties: 0</div>
+        <button id="reset" onclick="reset()">Reset Score</button>
     </div>
-    <button id="reset">Reset Score</button>
     <script src="./code.js"></script>
 
 </body>
