@@ -4,6 +4,47 @@ let score = JSON.parse(localStorage.getItem('score')) || {
     losses: 0,
     ties: 0
   };
+
+let isAutoPlaying = false;
+let intervalId;
+
+function autoPlay(){
+
+    if(!isAutoPlaying){
+        document.querySelector('#autoplay').style.background = 'green';
+       intervalId = setInterval(function(){
+            let humanAutoPlay;
+            
+            let randomComputer2 = Math.floor(Math.random() * 3);
+            
+            if(randomComputer2 == 0){
+
+                humanAutoPlay = 'Rock';
+
+            }else if (randomComputer2 == 1){
+
+                humanAutoPlay = 'Paper';
+
+            }else{
+
+                humanAutoPlay = 'Scissors';
+            }
+    
+            console.log(humanAutoPlay);
+            humanPlayer(humanAutoPlay);
+            isAutoPlaying = true;
+
+        }, 1000);
+    }else{
+        document.querySelector('#autoplay').style.background = 'red';
+        clearInterval(intervalId);
+        isAutoPlaying = false;
+    }
+   
+
+
+   
+}
   
 function computerPlayer(){
     let randomComputer = Math.floor(Math.random() * 3);
@@ -14,7 +55,7 @@ function computerPlayer(){
             return 'Rock';
 
             break;
-
+        
         case 1:
             computerMove = 'paper';
             return 'Paper';
@@ -36,7 +77,7 @@ function humanPlayer(human){
 
     computer = computerPlayer();
 
-    let ties = 0, wins = 0, losses = 0;
+   // let ties = 0, wins = 0, losses = 0;
 
     switch(human){
         case 'Rock':

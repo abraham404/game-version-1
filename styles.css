@@ -25,13 +25,19 @@ body{
     text-align: center;
 }
 
-#reset{
+
+
+#reset, #autoplay{
     margin: 10px;
     background-color: rgb(76, 76, 238);
     padding: 10px;
     border: none;
     color: white;
     border-radius: 10px;
+}
+
+#autoplay{
+    background-color: red;
 }
 
 #human, #computer{
